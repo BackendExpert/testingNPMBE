@@ -24,3 +24,11 @@ module.exports = ${controllerName}
 
 // Define the controller file path
 const controllerPath = path.join('Controllers', `${controllerName}.js`);
+
+// Ensure the directory exists
+fs.mkdirSync(path.dirname(controllerPath), { recursive: true });
+
+// Write the controller file
+fs.writeFileSync(controllerPath, controllerContent.trim());
+
+console.log(`Controller ${controllerName} created at ${controllerPath}`);
