@@ -11,3 +11,13 @@ if (!controllerName) {
     console.error('Enter Controller name');
     process.exit(1);
 }
+
+// make controller file content
+
+const controllerContent = `
+const ${controllerName} = {
+    // all contoller methods goes here
+}
+
+module.exports = ${controllerName}
+`;
