@@ -21,3 +21,6 @@ const ${controllerName} = {
 
 module.exports = ${controllerName}
 `;
+
+// Define the controller file path
+const controllerPath = path.join('Controllers', `${controllerName}.js`);
