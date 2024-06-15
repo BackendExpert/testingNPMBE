@@ -9,7 +9,7 @@ const NameController = process.argv[2];
 
 
 //  check are there any controller name enterd
-if (!controllerName) {
+if (!NameController) {
     console.error('Enter Controller name');
     process.exit(1);
 }
@@ -17,15 +17,15 @@ if (!controllerName) {
 // make controller file content
 
 const controllerContent = `
-const ${controllerName} = {
+const ${NameController} = {
     // all contoller methods goes here
 }
 
-module.exports = ${controllerName}
+module.exports = ${NameController}
 `;
 
 // Define the controller file path
-const controllerPath = path.join('Controllers', `${controllerName}.js`);
+const controllerPath = path.join('Controllers', `${NameController}.js`);
 
 // Ensure the directory exists
 fs.mkdirSync(path.dirname(controllerPath), { recursive: true });
@@ -33,4 +33,4 @@ fs.mkdirSync(path.dirname(controllerPath), { recursive: true });
 // Write the controller file
 fs.writeFileSync(controllerPath, controllerContent.trim());
 
-console.log(`Controller ${controllerName} created at ${controllerPath}`);
+console.log(`Controller ${NameController} created at ${controllerPath}`);
