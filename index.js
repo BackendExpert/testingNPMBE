@@ -3,37 +3,10 @@
 const fs = require('fs');
 const path = require('path');
 
-// now get controller name from terminal
+// now get type and name from terminal
 
-const terminalCmd = process.argv[2];
+const type = process.argv[2];
+const name = process.argv[3];
 
 
-//  check are there any controller name enterd
-if (!terminalCmd) {
-    console.error('Enter Controller name');
-    process.exit(1);
-}
 
-if (terminalCmd === "CreateController"){
-
-    // make controller file content
-
-    const controllerContent = `
-    const ${NameController} = {
-        // all contoller methods goes here
-    }
-
-    module.exports = ${NameController}
-    `;
-
-    // Define the controller file path
-    const controllerPath = path.join('Controllers', `${NameController}.js`);
-
-    // Ensure the directory exists
-    fs.mkdirSync(path.dirname(controllerPath), { recursive: true });
-
-    // Write the controller file
-    fs.writeFileSync(controllerPath, controllerContent.trim());
-
-    console.log(`Controller ${NameController} created at ${controllerPath}`);
-}
