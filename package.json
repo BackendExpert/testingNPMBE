@@ -7,7 +7,7 @@
     "createcontroller": "./index.js"
   },
   "scripts": {
-    "createcontroller": "node index.js"
+    "createfile": "./createFile.js"
   },
   "author": "",
   "license": "ISC",
