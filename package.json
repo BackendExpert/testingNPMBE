@@ -4,10 +4,7 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "createcontroller": "./index.js"
-  },
-  "scripts": {
-    "createfile": "./createFile.js"
+    "createfile": "./index.js"
   },
   "author": "",
   "license": "ISC",
