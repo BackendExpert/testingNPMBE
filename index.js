@@ -30,15 +30,15 @@ if (type === 'controller') {
 
 else if (type === 'model') {
   fileContent = `
-        class ${name} {
-        constructor() {
-            // Initialize the model
-        }
+        const mongoose = require('mongoose')
 
-        // Add model methods here
-        }
-
-        module.exports = ${name};
+        const ${name}Schema = new mongoose.Schema({
+            // contenet of model
+        })
+        
+        const ${name} = mongoose.model('${name}', ${name}Schema)
+        
+        module.exports = ${name}
     `;
   filePath = path.join('Models', `${name}.js`);
 
