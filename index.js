@@ -20,15 +20,11 @@ let fileContent;
 let filePath;
 if (type === 'controller') {
     fileContent = `
-        class ${name} {
-        constructor() {
-            // Initialize the controller
+        const ${name} = {
+            // all contoller methods goes here
         }
-
-        // Add controller methods here
-        }
-
-        module.exports = ${name};
+        
+        module.exports = ${name}
     `;
     filePath = path.join('server', 'Controllers', `${name}.js`);
 }
