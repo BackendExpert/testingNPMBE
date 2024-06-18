@@ -19,27 +19,27 @@ let filePath;
 
 if (type === 'controller') {
   fileContent = `
-    const ${name} = {
-        // all contoller methods goes here
-    }
+const ${name} = {
+    // all contoller methods goes here
+}
 
-    module.exports = authController
-        `;
+module.exports = authController
+`;
   filePath = path.join('Controllers', `${name}.js`);
 } 
 
 else if (type === 'model') {
   fileContent = `
-        const mongoose = require('mongoose')
+const mongoose = require('mongoose')
 
-        const ${name}Schema = new mongoose.Schema({
-            // contenet of model
-        })
-        
-        const ${name} = mongoose.model('${name}', ${name}Schema)
-        
-        module.exports = ${name}
-    `;
+const ${name}Schema = new mongoose.Schema({
+    // contenet of model
+})
+       
+const ${name} = mongoose.model('${name}', ${name}Schema)
+       
+module.exports = ${name}
+`;
   filePath = path.join('Models', `${name}.js`);
 
 } else {
