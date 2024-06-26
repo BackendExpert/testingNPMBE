@@ -13,7 +13,7 @@ async function createController(name) {
 
   module.exports = ${name}Controller;
   `
-  const controllerPath = path.join('server', 'Controllers', `${name}Controller.js`);
+  const controllerPath = path.join('Controllers', `${name}Controller.js`);
 
   await fs.mkdir(path.dirname(controllerPath), { recursive: true });
 
@@ -34,7 +34,7 @@ async function createModel(name) {
   module.exports = ${name};
   `
 
-  const modelPath = path.join('server', 'Models', `${name}.js`);
+  const modelPath = path.join('Models', `${name}.js`);
 
   await fs.mkdir(path.dirname(modelPath), { recursive: true });
 
@@ -55,7 +55,7 @@ async function createRoute(name) {
     module.exports = router;
   `
 
-  const routePath = path.join('server', 'Routes', `${name}.js`);
+  const routePath = path.join('Routes', `${name}.js`);
 
   await fs.mkdir(path.dirname(routePath), { recursive: true });
 
