@@ -85,5 +85,5 @@ if (!type || !name) {
     console.error('Error:', err);
     process.exit(1);
   }
-})
+})()
 
