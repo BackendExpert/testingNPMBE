@@ -45,14 +45,14 @@ module.exports = ${name};
 async function createRoute(name) {
   const contentRoute = `
     const express = require('express')
-  // import your Controller according to route
+// import your Controller according to route
     
-  const router = express.Router()
+const router = express.Router()
     
-  // adding routes according to your needs 
+// adding routes according to your needs 
     
     
-  module.exports = router;
+module.exports = router;
     `
 
   const routePath = path.join('Routes', `${name}.js`);
