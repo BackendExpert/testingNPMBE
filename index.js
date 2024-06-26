@@ -53,7 +53,7 @@ async function createRoute(name) {
     
     
   module.exports = router;
-  `
+    `
 
   const routePath = path.join('Routes', `${name}.js`);
 
