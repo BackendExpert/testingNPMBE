@@ -47,6 +47,8 @@ async function createRoute(name) {
     
     const router = express.Router()
     
+    // adding routes according to your needs 
+    
     
     module.exports = router;
   `
