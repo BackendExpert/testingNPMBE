@@ -3,6 +3,7 @@ const path = require('path');
 
 async function createController(name) {
   const contectController = `
+  // import your model or models according to controller
 
   const ${name}Controller = {
     // the contect of Controller
@@ -37,4 +38,16 @@ async function createModel(name) {
 
   await fs.writeFile(modelPath, controllerContent.trim());
   console.log(`Controller ${name}Controller created at ${modelPath}`);
+}
+
+async function createRoute(name) {
+  const contentRoute = `
+    const express = require('express')
+    // import your Controller according to route
+    
+    const router = express.Router()
+    
+    
+    module.exports = router;
+  `
 }
