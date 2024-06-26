@@ -60,3 +60,11 @@ async function createRoute(name) {
   await fs.writeFile(routePath, controllerContent.trim());
   console.log(`Route ${name} created at ${routePath}`);
 }
+
+const [,, type, name] = process.argv;
+
+if (!type || !name) {
+  console.error('Please provide a type (controller, model, or Route) and a name');
+  process.exit(1);
+}
+
