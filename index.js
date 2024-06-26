@@ -37,7 +37,7 @@ async function createModel(name) {
   await fs.mkdir(path.dirname(modelPath), { recursive: true });
 
   await fs.writeFile(modelPath, controllerContent.trim());
-  console.log(`Controller ${name}Controller created at ${modelPath}`);
+  console.log(`Model ${name}Controller created at ${modelPath}`);
 }
 
 async function createRoute(name) {
@@ -52,4 +52,11 @@ async function createRoute(name) {
     
     module.exports = router;
   `
+
+  const routePath = path.join('server', 'Routes', `${name}.js`);
+
+  await fs.mkdir(path.dirname(routePath), { recursive: true });
+
+  await fs.writeFile(routePath, controllerContent.trim());
+  console.log(`Route ${name} created at ${routePath}`);
 }
