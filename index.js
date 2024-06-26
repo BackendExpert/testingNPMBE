@@ -68,3 +68,22 @@ if (!type || !name) {
   process.exit(1);
 }
 
+
+(async () => {
+  try{
+    if(type === "controller"){
+      await createController(name)
+    }
+    else if(type === "model"){
+      await createModel(name)
+    }
+    else if(type === "route"){
+      await createRoute(name)
+    }
+  }
+  catch (err) {
+    console.error('Error:', err);
+    process.exit(1);
+  }
+})
+
