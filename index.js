@@ -23,7 +23,7 @@ const ${name} = {
     // all contoller methods goes here
 }
 
-module.exports = authController
+module.exports = ${name}
 `;
   filePath = path.join('Controllers', `${name}.js`);
 } 
