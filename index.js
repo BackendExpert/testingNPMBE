@@ -7,11 +7,11 @@ async function createController(name) {
   const contectController = `
   // import your model or models according to controller
 
-  const ${name}Controller = {
-    // the contect of Controller
-  }
+const ${name}Controller = {
+  // the contect of Controller
+}
 
-  module.exports = ${name}Controller;
+module.exports = ${name}Controller;
   `
   const controllerPath = path.join('Controllers', `${name}Controller.js`);
 
@@ -25,13 +25,13 @@ async function createModel(name) {
   const contentModel = `
   const mongoose = require('mongoose')
 
-  const ${name}Schema = new mongoose.Schema({
-    // content of model
-  })
+const ${name}Schema = new mongoose.Schema({
+  // content of model
+})
   
-  const ${name} = mongoose.model('${name}', ${name}Schema)
+const ${name} = mongoose.model('${name}', ${name}Schema)
   
-  module.exports = ${name};
+module.exports = ${name};
   `
 
   const modelPath = path.join('Models', `${name}.js`);
@@ -45,14 +45,14 @@ async function createModel(name) {
 async function createRoute(name) {
   const contentRoute = `
     const express = require('express')
-    // import your Controller according to route
+  // import your Controller according to route
     
-    const router = express.Router()
+  const router = express.Router()
     
-    // adding routes according to your needs 
+  // adding routes according to your needs 
     
     
-    module.exports = router;
+  module.exports = router;
   `
 
   const routePath = path.join('Routes', `${name}.js`);
