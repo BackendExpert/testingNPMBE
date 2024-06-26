@@ -17,7 +17,7 @@ async function createController(name) {
 
   await fs.mkdir(path.dirname(controllerPath), { recursive: true });
 
-  await fs.writeFile(controllerPath, controllerContent.trim());
+  await fs.writeFile(controllerPath, contectController.trim());
   console.log(`Controller ${name}Controller created at ${controllerPath}`);
 }
 
@@ -38,7 +38,7 @@ async function createModel(name) {
 
   await fs.mkdir(path.dirname(modelPath), { recursive: true });
 
-  await fs.writeFile(modelPath, controllerContent.trim());
+  await fs.writeFile(modelPath, contentModel.trim());
   console.log(`Model ${name}Controller created at ${modelPath}`);
 }
 
@@ -59,7 +59,7 @@ async function createRoute(name) {
 
   await fs.mkdir(path.dirname(routePath), { recursive: true });
 
-  await fs.writeFile(routePath, controllerContent.trim());
+  await fs.writeFile(routePath, contentRoute.trim());
   console.log(`Route ${name} created at ${routePath}`);
 }
 
